@@ -15,7 +15,7 @@
                 </p>
             </div>
             <div class="register-form__group">
-                <input class="register-form__input" type="mail" name="email" id="email" placeholder="例：test@example.com">
+                <input class="register-form__input" type="mail" name="email" id="email" placeholder="メールアドレス">
                 <p class="register-form__error-message">
                     @error('email')
                     {{ $message }}
@@ -30,11 +30,15 @@
                     @enderror
                 </p>
             </div>
+            <div class="login-form__group">
+                <input class="login-form__input" type="password" name="password_confirmation" placeholder="確認用パスワード">
+            </div>
             <input class="register-form__btn btn" type="submit" value="会員登録">
-            @section('link')
-            <a class="header__link" href="/login">ログイン</a>
-            @endsection
         </form>
+        @section('link')
+        <p>アカウントをお持ちの方はこちらから</p>
+        <a class="header__link" href="/login">ログイン</a>
+        @endsection
     </div>
 </div>
 @endsection('content')

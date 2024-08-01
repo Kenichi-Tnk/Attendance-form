@@ -8,19 +8,9 @@
         @csrf
             <div class="login-form__group">
                 <input class="login-form__input" type="mail" name="email" id="email" placeholder="メールアドレス">
-                <p class="register-form__error-message">
-                    @error('email')
-                    {{ $message }}
-                    @enderror
-                </p>
             </div>
             <div class="login-form__group">
                 <input class="login-form__input" type="password" name="password" id="password" placeholder="パスワード">
-                <p>
-                    @error('password')
-                    {{ $message }}
-                    @enderror
-                </p>
             </div>
             <input class="login-form__btn btn" type="submit" value="ログイン">
         </form>

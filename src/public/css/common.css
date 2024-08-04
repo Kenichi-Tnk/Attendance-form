@@ -6,7 +6,7 @@ body {
 body,
 textarea,
 input {
-    color: #8B7969;
+    color: gray;
 }
 
 textarea::placeholder,
@@ -24,10 +24,9 @@ input::placeholder {
 .header {
     display: grid;
     align-items: center;
-    padding: 16px 0;
+    padding: 16px 30px;
     height: 80px;
-    border: 1px solid #E0DFDE;
-    text-align: center;
+    text-align: left;
     font-family: serif;
 
     grid-template-columns: repeat(3, 1fr);
@@ -35,10 +34,11 @@ input::placeholder {
 }
 
 .header__heading {
-    font-weight: lighter;
+    font-weight: bold;
     font-size: 32px;
-
-    grid-column: 2;
+    padding: 0px 0px;
+    color: #000000;
+    grid-column: 1;
 }
 
 .header__link {
@@ -63,17 +63,17 @@ input::placeholder {
 
 .content__heading {
     text-align: center;
-    font-weight: 100;
     font-size: 32px;
     font-family: serif;
+    color: #000000;
 }
 
 /* ボタン */
 .btn {
     display: block;
-    padding: 8px 32px;
+    padding: 8px 150px;
     border: none;
-    background-color: #82756A;
+    background-color: #0000ff;
     color: #FFF;
     font-size: 16px;
     cursor: pointer;
@@ -109,4 +109,10 @@ input::placeholder {
     border: 1px solid #8B7969;
     background-color: #8B7969;
     color: #FFF;
+}
+
+.footer p {
+    text-align: center;
+    background-color:#fff;
+    color: #000000;
 }

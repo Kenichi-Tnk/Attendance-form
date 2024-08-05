@@ -4,7 +4,7 @@
 
 .login-form__inner {
     display: flex;
-    text-align: center;
+    justify-content: center;
     margin-top: 48px;
 }
 
@@ -28,11 +28,6 @@
 
 .login-form__group:first-of-type {
     margin-top: 0;
-}
-
-.login-form__label {
-    display: block;
-    margin-bottom: 8px;
 }
 
 .login-form__input {

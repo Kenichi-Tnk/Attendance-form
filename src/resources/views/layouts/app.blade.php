@@ -19,7 +19,7 @@
             @yield('content')
             @yield('link')
         </div>
-        <footer>
+        <footer class="footer">
             <p>Atte,inc.</p>
         </footer>
     </dv>

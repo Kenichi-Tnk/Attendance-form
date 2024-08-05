@@ -17,7 +17,6 @@ input::placeholder {
 .app {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 /* ヘッダー */
@@ -111,7 +110,9 @@ input::placeholder {
     color: #FFF;
 }
 
-.footer p {
+.footer {
+    width:100%;
+    padding: 30px 0;
     text-align: center;
     background-color:#fff;
     color: #000000;

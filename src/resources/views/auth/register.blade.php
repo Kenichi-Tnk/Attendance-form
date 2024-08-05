@@ -25,9 +25,9 @@
             <dv class="register-form__group">
                 <input class="register-form__btn btn" type="submit" value="会員登録">
             </div>
-            <div class="register-form__group">
-                <p>アカウントをお持ちの方はこちらから</p>
-                <a class="register-form__link" href="/login">ログイン</a>
+            <div class="register-link__group">
+                <p class="register-link__group">アカウントをお持ちの方はこちらから</p>
+                <a class="register-link__link" href="/login" style="text-decoration:none;">ログイン</a>
             </div>
         </form>
     </div>

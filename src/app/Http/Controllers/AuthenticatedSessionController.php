@@ -10,4 +10,9 @@ class AuthenticatedSessionController extends Controller
     {
         return view('login');
     }
+
+    public function redirectPath()
+    {
+        return view('stamp');
+    }
 }

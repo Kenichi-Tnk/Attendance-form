@@ -13,6 +13,22 @@
     <div class="app">
         <header class="header">
             <h1 class="header__heading">Atte</h1>
+            <ul class="header-nav">
+                @if (Auth::check())
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="/stamp">ホーム</a>
+                </li>
+                <li class="header-nav__item">
+                    <a class="header-nav__link" href="/attendance">日付一覧</a>
+                </li>
+                <li class="header-nav__item">
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button class="header-nav_button">ログアウト</button>
+                    </form>
+                </li>
+                @endif
+            </ul>
             @yield('link')
         </header>
         <div class="content">

@@ -6,13 +6,5 @@ use Illuminate\Http\Request;
 
 class AuthenticatedSessionController extends Controller
 {
-    public function index()
-    {
-        return view('login');
-    }
-
-    public function redirectPath()
-    {
-        return view('stamp');
-    }
+    //
 }

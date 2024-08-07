@@ -18,4 +18,7 @@ use App\Http\Controllers\RegisterUserController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/', [AuthenticatedSessionController::class, 'login']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/', [AuthenticatedSessionController::class, 'stamp']);
+});

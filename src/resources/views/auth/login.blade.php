@@ -1,27 +1,47 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{asset('css/auth/login.css')}}">
+<link rel="stylesheet" href="{{ asset('css/auth/login.css') }}">
 @endsection
 
 @section('content')
-<div class="login-form">
-    <h2 class="login-form__heading content__heading">ログイン</h2>
-    <div class="login-form__inner">
-        <form class="login-form__form" action="/login" method="post">
+<div class="login__content">
+    <div class="login-form__heading">
+        <h2>ログイン</h2>
+    </div>
+    <form class="form" action="/login" method="post">
         @csrf
-            <div class="login-form__group">
-                <input class="login-form__input" type="mail" name="email" id="email" placeholder="メールアドレス">
+        <div class="form__group">
+            <div class="form__group-content">
+                <div class="form__input--text">
+                    <input type="email" name="email" value="{{ old('email') }}" placeholder="メールアドレス"/>
+                </div>
+                <div class="form__error">
+                    @error('email')
+                        {{ $message }}
+                    @enderror
+                </div>
             </div>
-            <div class="login-form__group">
-                <input class="login-form__input" type="password" name="password" id="password" placeholder="パスワード">
+        </div>
+        <div class="form__group">
+            <div class="form__group-content">
+                <div class="form__input--text">
+                    <input type="password" name="password" placeholder="パスワード" />
+                </div>
+                <div class="form__error">
+                    @error('password')
+                        {{ $message }}
+                    @enderror
+                </div>
             </div>
-            <input class="login-form__btn btn" type="submit" value="ログイン">
-            <div class="login-link__group">
-                <p class="login-link__group">アカウントをお持ちでない方はこちらから</p>
-                <a class="login-link__group" href="/register" style="text-decoration:none;">会員登録</a>
-            </div>
-        </form>
+        </div>
+        <div class="form__button">
+            <button class="form__button-submit" type="submit">ログイン</button>
+        </div>
+    </form>
+    <div class="register__link">
+        <p>アカウントをお持ちでない方はこちらから</P>
+        <a class="register__button-submit" href="/register" style="text-decoration:none;">会員登録</a>
     </div>
 </div>
-@endsection('content')
+@endsection

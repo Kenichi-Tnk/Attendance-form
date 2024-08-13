@@ -1,117 +1,60 @@
 html,
-body {
-    height: 100%;
-}
-
-body,
-textarea,
-input {
-    color: gray;
-}
-
-textarea::placeholder,
-input::placeholder {
-    color: #BEB1A6;
-}
-
-.app {
-    display: flex;
-    flex-direction: column;
-}
 
 /* ヘッダー */
 .header {
-    display: grid;
-    align-items: center;
-    padding: 16px 30px;
-    height: 80px;
-    text-align: left;
-    font-family: serif;
-
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
+    background: #fff;
 }
 
-.header__heading {
-    font-weight: bold;
-    font-size: 32px;
-    padding: 0px 0px;
-    color: #000000;
-    grid-column: 1;
-}
-
-.header__link {
+.header__inner {
     margin: 0 auto;
-    width: 80px;
-    border: 1px solid #D9C6B5;
-    background-color: #F0F0F0;
-    color: #D9C6B5;
-    text-decoration: none;
-
-    grid-column: 3;
+    padding: 20px 15px;
+    max-width: 1230px;
 }
 
-/* コンテンツ */
-.content {
+.header-utilities {
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-    padding: 48px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.content__heading {
-    text-align: center;
-    font-size: 32px;
-    font-family: serif;
+.header__logo {
     color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
 }
 
-/* ボタン */
-.btn {
-    display: block;
-    padding: 8px 150px;
+.heder-utilities nav {
+    width: 18%;
+}
+
+.header-nav {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.header-nav__link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.header-nav__button {
     border: none;
-    background-color: #0000ff;
-    color: #FFF;
+    background: transparent;
+    color: #000000;
     font-size: 16px;
     cursor: pointer;
 }
 
-/* ページネーション */
-.pagination {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
+/* コンテンツ */
+main {
 
-.pagination li:not(.active) {
-    border: 1px solid #E0DFDE;
-    padding: 4px 12px;
-}
-
-.pagination li:not(:last-child) {
-    border-right: none;
-}
-
-.pagination a {
-    color: #8B7969;
-    text-decoration: none;
-}
-
-.pagination__link {
-    text-decoration: none;
-}
-
-.active {
-    padding: 4px 12px;
-    border: 1px solid #8B7969;
-    background-color: #8B7969;
-    color: #FFF;
+    background-color: #f5f5f5;
 }
 
 .footer {
-    width:100%;
+    width: 100%;
     padding: 30px 0;
     text-align: center;
     background-color:#fff;

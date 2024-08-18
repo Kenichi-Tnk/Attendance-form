@@ -1,43 +1,50 @@
-.stamp__alert--success {
-    padding: 10px 30px;
-    border-color: #badbcc;
-    background-color: #d1e7dd;
-    color: #0f5132;
+.stamp__alert {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size:13px;
 }
 
-.stamp__alert--danger {
-    padding: 10px 0;
-    border-color: #f5c2c7;
-    background-color: #f8d7da;
-    color: #842029;
+.stamp__work-panel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+    margin-bottom: 30px;
 }
 
-.stamp__alert--danger ul {
-    margin: 0;
+.stamp__break-panel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
 }
 
 .samp__panel {
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
     width: 70%;
 }
 
 .stamp__button {
-    width: 100%;
+    width: 50%;
+    height: 50%;
     text-align: center;
 }
 
 .stamp__button-submit {
     padding: 5px;
-    width: 30%;
+    width: 85%;
+    height: 100px;
     border: none;
     border-radius: 3px;
-    background: #000;
-    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    background: #fff;
+    color: #000000;
     cursor: pointer;
 }
 
 .stamp__content {
     margin: 0 auto;
-    padding: 30px 15px;
+    padding: 20px 60px;
     max-width: 1230px;
 }

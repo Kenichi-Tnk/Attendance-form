@@ -10,4 +10,9 @@ class AuthenticatedSessionController extends Controller
     {
         return view('stamp');
     }
+
+    public function attendance()
+    {
+        //
+    }
 }

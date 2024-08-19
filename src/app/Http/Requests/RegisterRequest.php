@@ -24,9 +24,18 @@ class RegisterRequest extends FortifyRegisterRequest
     public function rules()
     {
         return [
-            'name' => 'required'| 'string'| 'max:191',
-            'email' => 'required'| 'string'| 'max:191'| Rule::unique('users')->ignore($this->id),
-            'password' => 'required'|'mix:8'| 'max:191',
+            'name' => 'required'| 'string'| 'max:191',   //ユーザー名
+            'email' => 'required'| 'string'| 'max:191'| Rule::unique('users')->ignore($this->id), //メールアドレス,ユニークで重複チェック
+            'password' => 'required'|'mix:8'| 'max:191', //パスワード
+        ];
+    }
+
+    public function messages()
+    {
+        return[
+            'name.required' => 'ユーザー名は必須です。',
+            'email.required' => 'メールアドレスは必須です。',
+            'email.unique' => 'メールアドレスはすでに使用されています。',
         ];
     }
 }

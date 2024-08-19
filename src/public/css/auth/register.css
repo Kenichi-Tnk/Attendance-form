@@ -36,7 +36,7 @@
 }
 
 .form__button {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .form__button-submit {
@@ -48,6 +48,7 @@
     background: #0000ff;
     color: #fff;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .login__link {

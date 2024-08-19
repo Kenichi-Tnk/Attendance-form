@@ -23,10 +23,10 @@
                             <a class="header-nav__link" href="/stamp">ホーム</a>
                         </li>
                         <li class="header-nav__item">
-                            <a class="header-nav__link" href="/attendance">日付一覧</a>
+                            <form class="form" action="/stamp/attendance" method="post">日付一覧</a>
                         </li>
                         <li class="header-nav__item">
-                            <form action="/logout" method="post">
+                            <form class="form" action="/logout" method="post">
                             @csrf
                                 <button class="header-nav_button">ログアウト</button>
                             </form>

@@ -25,7 +25,7 @@ class RegisterRequest extends FortifyRegisterRequest
     {
         return [
             'name' => 'required'| 'string'| 'max:191',   //ユーザー名
-            'email' => 'required'| 'string'| 'max:191'| Rule::unique('users')->ignore($this->id), //メールアドレス,ユニークで重複チェック
+            'email' => 'required'| 'string'| 'max:191'| Rule::unique('users')->ignore($this->id), //メールアドレス,重複チェック
             'password' => 'required'|'mix:8'| 'max:191', //パスワード
         ];
     }

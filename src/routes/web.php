@@ -22,7 +22,3 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/', [AuthenticatedSessionController::class, 'index']);
 });
-
-Route::post('/stamp/attendance', [autheticatedSessionController::class, 'attendance']);
-
-

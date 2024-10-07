@@ -32,8 +32,9 @@ class AttendanceController extends Controller
     //打刻処理
     public function work(Request $request)
     {
+
         $now_date = Carbon::now()->format('Y-m-d');
-        $now_time = carbon::now()->format('H:i:s');
+        $now_time = carbon::now()->format('Y-m-d H:i:s');
         $user_id = Auth::user()->id;
         if($request->has('start_rest') || $request->has('end_rest'))
         {
@@ -75,6 +76,7 @@ class AttendanceController extends Controller
             $attendance = Work::where('user_id', $user_id)
             ->where('date', $now_date)
             ->first();
+            $attendance->end = $now_date;
             $attendance->end = $now_time;
             $status = 0;
         }

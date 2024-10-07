@@ -11,39 +11,38 @@
     <link rel="stylesheet" href="{{ asset('css/common.css')}}">
     @yield('css')
 </head>
+
 <body>
     <header class="header">
-        <div class="header__inner">
-            <div class="header-utilities">
-                <h1 class="header__logo">Atte</h1>
-                <nav>
-                    <ul class="header-nav">
-                        @if (Auth::check())
-                        <li class="header-nav__item">
-                            <a class="header-nav__link" href="/">ホーム</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a class="header-nav__link" href="{{route('attendance/date') }}">日付一覧</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <form class="form" action="/logout" method="post">
-                            @csrf
-                                <button class="header-nav_button">ログアウト</button>
-                            </form>
-                        </li>
-                        @endif
-                    </ul>
-                </naV>
-            </div>
+        <div class="header__left">
+            <span class="header__logo">Atte</span>
         </div>
-        @yield('link')
+        @if (Auth::check() && Auth::user())
+            <div class="header__right">
+                <ul class="header__right-list">
+                    <li class="header__right-item">
+                        <a class="header__item-link" href="/">ホーム</a>
+                    </li>
+                    <li class="header__right-item">
+                        <a class="header__item-link" href="{{route('attendance/date') }}">日付一覧</a>
+                    </li>
+                    <li class="header__right-item">
+                        <a class="header__item-link" href="{{route('logout') }}">ログアウト</a>
+                    </li>
+                </ul>
+            </div>
+        @endif
     </header>
     <main>
         @yield('content')
-        @yield('link')
     </main>
-    <footer class="footer">
-        <p>Atte,inc.</p>
+
+    <footer>
+        <div class="footer__item">
+            <small class="footer__text">
+                Atte,inc.
+            </small>
+        </div>
     </footer>
 </body>
 
